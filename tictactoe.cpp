@@ -61,7 +61,7 @@ char winner(char cells[])
         if (cells[i] == cells[(i + 1)] && cells[(i + 2)] == cells[i])
             return cells[i];
         if (cells[9 % i + 1] == cells[(9 % i + 1) + 3] && cells[(9 % i + 1) + 3] == cells[(9 % i + 1) + 6])
-            return cells[i];
+            return cells[9 % i + 1];
     }
     if (cells[1] == cells[5] && cells[5] == cells[9])
         return cells[1];
