@@ -52,6 +52,7 @@ int main(void)
             break;
         }
     } while (end != 9);
+    if(winner(cells) == 'd') cout << "Draw !!!"; 
 }
 
 char winner(char cells[])
@@ -67,8 +68,10 @@ char winner(char cells[])
         return cells[1];
     if (cells[3] == cells[5] && cells[5] == cells[7])
         return cells[3];
-
-    return 'z';
+     for(int i = 1; i <= 9; i++)
+         if(cells[i] >= '1' && cells[i] <= '9')
+             return 'z';
+    return 'd';
 }
 
 bool ac(int choice, char cells[])
